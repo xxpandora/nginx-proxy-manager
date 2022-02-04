@@ -30,7 +30,7 @@ footer: MIT Licensed | Copyright © 2016-present jc21.com
   </div>
   <div class="feature">
     <h2>Docker FTW</h2>
-    <p>Built as a Docker Image, Nginx Proxy Manager only requires a database.</p>
+    <p>Built as a Docker Image, PegaFlare WAF Manager only requires a database.</p>
   </div>
   <div class="feature">
     <h2>Multiple Users</h2>

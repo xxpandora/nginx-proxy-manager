@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "root",
-  "title": "Nginx Proxy Manager REST API",
-  "description": "This is the Nginx Proxy Manager REST API",
+  "title": "PegaFlare WAF Manager REST API",
+  "description": "This is the PegaFlare WAF Manager REST API",
   "version": "2.0.0",
   "links": [
     {

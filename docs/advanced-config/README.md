@@ -132,7 +132,7 @@ On some Docker hosts IPv6 may not be enabled. In these cases, the following mess
 
 > Address family not supported by protocol
 
-The easy fix is to add a Docker environment variable to the Nginx Proxy Manager stack:
+The easy fix is to add a Docker environment variable to the PegaFlare WAF Manager stack:
 
 ```yml
     environment:

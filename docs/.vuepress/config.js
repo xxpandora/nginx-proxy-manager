@@ -2,23 +2,23 @@ module.exports = {
 	locales: {
 		"/": {
 			lang: "en-US",
-			title: "Nginx Proxy Manager",
+			title: "PegaFlare WAF Manager",
 			description: "Expose your services easily and securely"
 		}
 	},
 	head: [
 		["link", { rel: "icon", href: "/icon.png" }],
 		["meta", { name: "description", content: "Docker container and built in Web Application for managing Nginx proxy hosts with a simple, powerful interface, providing free SSL support via Let's Encrypt" }],
-		["meta", { property: "og:title", content: "Nginx Proxy Manager" }],
+		["meta", { property: "og:title", content: "PegaFlare WAF Manager" }],
 		["meta", { property: "og:description", content: "Docker container and built in Web Application for managing Nginx proxy hosts with a simple, powerful interface, providing free SSL support via Let's Encrypt"}],
 		["meta", { property: "og:type", content: "website" }],
 		["meta", { property: "og:url", content: "https://nginxproxymanager.com/" }],
 		["meta", { property: "og:image", content: "https://nginxproxymanager.com/icon.png" }],
 		["meta", { name: "twitter:card", content: "summary"}],
-		["meta", { name: "twitter:title", content: "Nginx Proxy Manager"}],
+		["meta", { name: "twitter:title", content: "PegaFlare WAF Manager"}],
 		["meta", { name: "twitter:description", content: "Docker container and built in Web Application for managing Nginx proxy hosts with a simple, powerful interface, providing free SSL support via Let's Encrypt"}],
 		["meta", { name: "twitter:image", content: "https://nginxproxymanager.com/icon.png"}],
-		["meta", { name: "twitter:alt", content: "Nginx Proxy Manager"}],
+		["meta", { name: "twitter:alt", content: "PegaFlare WAF Manager"}],
 	],
 	themeConfig: {
 		logo: "/icon.png",
