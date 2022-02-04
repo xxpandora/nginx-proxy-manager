@@ -59,8 +59,8 @@
       "hosts": "Hosts"
     },
     "footer": {
-      "fork-me": "Fork me on Github",
-      "copy": "&copy; 2021 <a href=\"{url}\" target=\"_blank\">jc21.com</a>.",
+      "fork-me": "Visit Web Site",
+      "copy": "&copy; 2022 <a href=\"{url}\" target=\"_blank\">pegaflare waf</a>.",
       "theme": "Theme by <a href=\"{url}\" target=\"_blank\">Tabler</a>"
     },
     "dashboard": {
