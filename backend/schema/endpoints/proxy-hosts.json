@@ -28,9 +28,8 @@
       "maxLength": 255
     },
     "forward_port": {
-      "type": "integer",
-      "minimum": 1,
-      "maximum": 65535
+      "type": "string",
+      "enum": ["80", "443"]
     },
     "certificate_id": {
       "$ref": "../definitions.json#/definitions/certificate_id"
