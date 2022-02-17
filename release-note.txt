@@ -1,0 +1,28 @@
+###################
+###Release Note:###
+###################
+
+*************
+***v2.9.21***
+*************
+nginx-proxy-manager\backend\schema\endpoints\proxy-hosts.json
+
+"forward_port": {
+  "type": "string",
+  "enum": ["80", "443"]
+
+*************
+***v2.9.22***
+*************
+nginx-proxy-manager\backend\migrations\20180618015850_initial.js
+
+				table.string('forward_port').notNull().unsigned();
+
+---------
+
+nginx-proxy-manager\frontend\js\app\nginx\proxy\form.ejs
+
+                                <select name="forward_port" class="form-control custom-select" placeholder="80">
+                                    <option value="80" <%- forward_port === '80' ? 'selected' : '' %>>80</option>
+                                    <option value="443" <%- forward_port === '443' ? 'selected' : '' %>>443</option>
+                                </select>
