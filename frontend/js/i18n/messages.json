@@ -64,7 +64,7 @@
       "theme": "Theme by <a href=\"{url}\" target=\"_blank\">Tabler</a>"
     },
     "dashboard": {
-      "title": "Hi {name}"
+      "title": "Welcome {name}"
     },
     "all-hosts": {
       "empty-subtitle": "{manage, select, true{Why don't you create one?} other{And you don't have permission to create one.}}",
@@ -74,7 +74,7 @@
       "http2-support": "HTTP/2 Support",
       "domain-names": "Domain Names",
       "cert-provider": "Certificate Provider",
-      "block-exploits": "I'm Under Attack",
+      "block-exploits": "Block Exploits",
       "caching-enabled": "Cache Assets",
       "ssl-certificate": "SSL Certificate",
       "none": "None",
