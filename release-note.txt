@@ -26,3 +26,8 @@ nginx-proxy-manager\frontend\js\app\nginx\proxy\form.ejs
                                     <option value="80" <%- forward_port === '80' ? 'selected' : '' %>>80</option>
                                     <option value="443" <%- forward_port === '443' ? 'selected' : '' %>>443</option>
                                 </select>
+*************
+***v2.9.24***
+*************
+
+Back to v2.9.21 and v2.9.22 file.
