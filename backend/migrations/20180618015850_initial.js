@@ -73,7 +73,7 @@ exports.up = function (knex/*, Promise*/) {
 				table.integer('certificate_id').notNull().unsigned().defaultTo(0);
 				table.integer('ssl_forced').notNull().unsigned().defaultTo(0);
 				table.integer('caching_enabled').notNull().unsigned().defaultTo(0);
-				table.integer('block_exploits').notNull().unsigned().defaultTo(0);
+				table.integer('managed_waf').notNull().unsigned().defaultTo(0);
 				table.text('advanced_config').notNull().defaultTo('');
 				table.json('meta').notNull();
 			});
@@ -92,7 +92,7 @@ exports.up = function (knex/*, Promise*/) {
 				table.integer('preserve_path').notNull().unsigned().defaultTo(0);
 				table.integer('certificate_id').notNull().unsigned().defaultTo(0);
 				table.integer('ssl_forced').notNull().unsigned().defaultTo(0);
-				table.integer('block_exploits').notNull().unsigned().defaultTo(0);
+				table.integer('managed_waf').notNull().unsigned().defaultTo(0);
 				table.text('advanced_config').notNull().defaultTo('');
 				table.json('meta').notNull();
 			});

@@ -31,3 +31,9 @@ nginx-proxy-manager\frontend\js\app\nginx\proxy\form.ejs
 *************
 
 Back to v2.9.21 and v2.9.22 file.
+
+*************
+***v2.9.25***
+*************
+
+Update Block Exploit to Management WAF Rule
