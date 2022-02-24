@@ -51,10 +51,7 @@
                         <div class="col-sm-4 col-md-4">
                             <div class="form-group">
                                 <label class="form-label"><%- i18n('proxy-hosts', 'forward-port') %> <span class="form-required">*</span></label>
-                                <select name="forward_port" class="form-control custom-select" placeholder="80">
-                                    <option value="80" <%- forward_port === '80' ? 'selected' : '' %>>80</option>
-                                    <option value="443" <%- forward_port === '443' ? 'selected' : '' %>>443</option>
-                                </select>
+                                <input name="forward_port" type="number" class="form-control text-monospace" placeholder="80" value="<%- forward_port %>" required>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
