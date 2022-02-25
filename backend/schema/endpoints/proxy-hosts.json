@@ -47,8 +47,8 @@
     "http2_support": {
       "$ref": "../definitions.json#/definitions/http2_support"
     },
-    "block_exploits": {
-      "$ref": "../definitions.json#/definitions/block_exploits"
+    "managed_waf": {
+      "$ref": "../definitions.json#/definitions/managed_waf"
     },
     "caching_enabled": {
       "$ref": "../definitions.json#/definitions/caching_enabled"
@@ -146,8 +146,8 @@
     "http2_support": {
       "$ref": "#/definitions/http2_support"
     },
-    "block_exploits": {
-      "$ref": "#/definitions/block_exploits"
+    "managed_waf": {
+      "$ref": "#/definitions/managed_waf"
     },
     "caching_enabled": {
       "$ref": "#/definitions/caching_enabled"
@@ -236,8 +236,8 @@
           "http2_support": {
             "$ref": "#/definitions/http2_support"
           },
-          "block_exploits": {
-            "$ref": "#/definitions/block_exploits"
+          "managed_waf": {
+            "$ref": "#/definitions/managed_waf"
           },
           "caching_enabled": {
             "$ref": "#/definitions/caching_enabled"
@@ -309,8 +309,8 @@
           "http2_support": {
             "$ref": "#/definitions/http2_support"
           },
-          "block_exploits": {
-            "$ref": "#/definitions/block_exploits"
+          "managed_waf": {
+            "$ref": "#/definitions/managed_waf"
           },
           "caching_enabled": {
             "$ref": "#/definitions/caching_enabled"
