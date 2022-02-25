@@ -226,8 +226,8 @@
       "example": false,
       "type": "boolean"
     },
-    "managed_waf": {
-      "description": "Should we block common Exploits by Management WAF Rule",
+    "block_exploits": {
+      "description": "Should we block common exploits",
       "example": true,
       "type": "boolean"
     },

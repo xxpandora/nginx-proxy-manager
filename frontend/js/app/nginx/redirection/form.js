@@ -128,7 +128,7 @@ module.exports = Mn.View.extend({
             let data = this.ui.form.serializeJSON();
 
             // Manipulate
-            data.managed_waf     = !!data.managed_waf;
+            data.block_exploits     = !!data.block_exploits;
             data.preserve_path      = !!data.preserve_path;
             data.http2_support      = !!data.http2_support;
             data.hsts_enabled       = !!data.hsts_enabled;

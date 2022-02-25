@@ -160,7 +160,7 @@ module.exports = Mn.View.extend({
 
             // Manipulate
             data.forward_port            = parseInt(data.forward_port, 10);
-            data.managed_waf          = !!data.managed_waf;
+            data.block_exploits          = !!data.block_exploits;
             data.caching_enabled         = !!data.caching_enabled;
             data.allow_websocket_upgrade = !!data.allow_websocket_upgrade;
             data.http2_support           = !!data.http2_support;
