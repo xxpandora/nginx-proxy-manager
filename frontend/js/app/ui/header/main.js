@@ -13,12 +13,12 @@ module.exports = Mn.View.extend({
 
     ui: {
         link:     'a',
-        details:  'a.edit-details',
+        general:  'a.edit-general',
         password: 'a.change-password'
     },
 
     events: {
-        'click @ui.details': function (e) {
+        'click @ui.general': function (e) {
             e.preventDefault();
             Controller.showUserForm(Cache.User);
         },

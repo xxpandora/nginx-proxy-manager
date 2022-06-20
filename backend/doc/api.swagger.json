@@ -1,7 +1,7 @@
 {
 	"openapi": "3.0.0",
 	"info": {
-		"title": "PegaFlare WAF Manager API",
+		"title": "PegaCDN WAF Manager API",
 		"version": "2.x.x"
 	},
 	"servers": [
@@ -227,7 +227,7 @@
 										"value": {
 											"id": "default-site",
 											"name": "Default Site",
-											"description": "What to show when Nginx is hit with an unknown Host",
+											"description": "What to show when PegaCDN is hit with an unknown Host",
 											"value": "congratulations",
 											"meta": {}
 										}
@@ -286,7 +286,7 @@
 										"value": {
 											"id": "default-site",
 											"name": "Default Site",
-											"description": "What to show when Nginx is hit with an unknown Host",
+											"description": "What to show when PegaCDN is hit with an unknown Host",
 											"value": "congratulations",
 											"meta": {}
 										}
@@ -1016,7 +1016,7 @@
 						"type": "string",
 						"description": "Meaningful description",
 						"minLength": 1,
-						"example": "What to show when Nginx is hit with an unknown Host"
+						"example": "What to show when PegaCDN is hit with an unknown Host"
 					},
 					"value": {
 						"description": "Value in almost any form",
