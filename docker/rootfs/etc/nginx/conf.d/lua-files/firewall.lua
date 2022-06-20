@@ -7,11 +7,11 @@ local table = table
 local tonumber = tonumber
 local tostring = tostring
 local next = next
-local secret = " pegaflare"
+local secret = " pegacdn"
 local remote_addr = "auto" --Default Automatically get the Clients IP address
-local expire_time = 3600
+local expire_time = 30
 local javascript_REQUEST_TYPE = 2
-local refresh_auth = 5
+local refresh_auth = 3
 local JavascriptVars_opening = [[
 if(!window._phantom || !window.callPhantom){/*phantomjs*/
 if(!window.__phantomas){/*phantomas PhantomJS-based web perf metrics + monitoring tool*/
@@ -213,10 +213,6 @@ local user_agent_whitelist_table = {
 	{
 		"^ia_archiver %(%+http%:%/%/www%.alexa%.com%/site%/help%/webmasters%; crawler%@alexa%.com%)$",
 		2,
-	},
-	{
-		"^SiberAPPv1$",
-		3,
 	},
 }
 local authorization = 0
@@ -2382,7 +2378,7 @@ grant_access() --perform checks to see if user can access the site or if they wi
 Build HTML Template
 ]]
 
-local title = host .. [[ | Anti-DDoS Flood Protection and WAF]]
+local title = host .. [[ | PegaCDN WAF]]
 
 if javascript_REQUEST_TYPE == 3 then --Dynamic Random request
 	javascript_REQUEST_TYPE = math.random (1, 2) --Randomize between 1 and 2
@@ -2523,7 +2519,7 @@ local footer_body_ad_slot = [[
 
 local ddos_powered_by = [[
 <div class="powered_by" style="text-align:center;font-size:100%;">
-<a href="//www.pegaflare.com" target="_blank">DDoS protection by &copy; PegaFlare WAF</a>
+<a href="//www.pegaflare.com" target="_blank">DDoS protection by &copy; PegaCDN WAF</a>
 </div>
 ]]
 
