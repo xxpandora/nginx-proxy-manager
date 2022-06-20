@@ -1174,7 +1174,7 @@
 					},
 					"access_lists": {
 						"type": "string",
-						"description": "Access Lists Permissions",
+						"description": "Firewall Lists Permissions",
 						"enum": [
 							"hidden",
 							"view",

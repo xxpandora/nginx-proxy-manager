@@ -288,7 +288,7 @@ module.exports = {
     },
 
     /**
-     * Nginx Access List Form
+     * Nginx Firewall List Form
      *
      * @param [model]
      */
@@ -301,7 +301,7 @@ module.exports = {
     },
 
     /**
-     * Access List Delete Confirm
+     * Firewall List Delete Confirm
      *
      * @param model
      */

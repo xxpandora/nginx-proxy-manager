@@ -1,8 +1,8 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "endpoints/access-lists",
-	"title": "Access Lists",
-	"description": "Endpoints relating to Access Lists",
+	"title": "Firewall Lists",
+	"description": "Endpoints relating to Firewall Lists",
 	"stability": "stable",
 	"type": "object",
 	"definitions": {
@@ -17,7 +17,7 @@
 		},
 		"name": {
 			"type": "string",
-			"description": "Name of the Access List"
+			"description": "Name of the Firewall List"
 		},
 		"directive": {
 			"type": "string",
@@ -69,7 +69,7 @@
 	"links": [
 		{
 			"title": "List",
-			"description": "Returns a list of Access Lists",
+			"description": "Returns a list of Firewall Lists",
 			"href": "/nginx/access-lists",
 			"access": "private",
 			"method": "GET",
@@ -86,7 +86,7 @@
 		},
 		{
 			"title": "Create",
-			"description": "Creates a new Access List",
+			"description": "Creates a new Firewall List",
 			"href": "/nginx/access-list",
 			"access": "private",
 			"method": "POST",
@@ -155,7 +155,7 @@
 		},
 		{
 			"title": "Update",
-			"description": "Updates a existing Access List",
+			"description": "Updates a existing Firewall List",
 			"href": "/nginx/access-list/{definitions.identity.example}",
 			"access": "private",
 			"method": "PUT",
@@ -220,7 +220,7 @@
 		},
 		{
 			"title": "Delete",
-			"description": "Deletes a existing Access List",
+			"description": "Deletes a existing Firewall List",
 			"href": "/nginx/access-list/{definitions.identity.example}",
 			"access": "private",
 			"method": "DELETE",

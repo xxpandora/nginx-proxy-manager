@@ -281,7 +281,7 @@ module.exports = Mn.View.extend({
             createFilter: /^(?:\*\.)?(?:[^.*]+\.?)+[^.]$/
         });
 
-        // Access Lists
+        // Firewall Lists
         this.ui.access_list_select.selectize({
             valueField:       'id',
             labelField:       'name',

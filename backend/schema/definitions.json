@@ -138,7 +138,7 @@
       ]
     },
     "access_list_id": {
-      "description": "Access List ID",
+      "description": "Firewall List ID",
       "example": 1234,
       "type": "integer",
       "minimum": 0

@@ -116,7 +116,7 @@ const internalAccessList = {
 			.then((row) => {
 				if (row.id !== data.id) {
 					// Sanity check that something crazy hasn't happened
-					throw new error.InternalValidationError('Access List could not be updated, IDs do not match: ' + row.id + ' !== ' + data.id);
+					throw new error.InternalValidationError('Firewall List could not be updated, IDs do not match: ' + row.id + ' !== ' + data.id);
 				}
 			})
 			.then(() => {
