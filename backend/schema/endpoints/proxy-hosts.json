@@ -47,6 +47,9 @@
     "http2_support": {
       "$ref": "../definitions.json#/definitions/http2_support"
     },
+    "under_attack": {
+      "$ref": "../definitions.json#/definitions/under_attack"
+    },
     "managed_waf": {
       "$ref": "../definitions.json#/definitions/managed_waf"
     },
@@ -146,6 +149,9 @@
     "http2_support": {
       "$ref": "#/definitions/http2_support"
     },
+    "under_attack": {
+      "$ref": "#/definitions/under_attack"
+    },
     "managed_waf": {
       "$ref": "#/definitions/managed_waf"
     },
@@ -236,6 +242,9 @@
           "http2_support": {
             "$ref": "#/definitions/http2_support"
           },
+          "under_attack": {
+            "$ref": "#/definitions/under_attack"
+          },
           "managed_waf": {
             "$ref": "#/definitions/managed_waf"
           },
@@ -308,6 +317,9 @@
           },
           "http2_support": {
             "$ref": "#/definitions/http2_support"
+          },
+          "under_attack": {
+            "$ref": "#/definitions/under_attack"
           },
           "managed_waf": {
             "$ref": "#/definitions/managed_waf"

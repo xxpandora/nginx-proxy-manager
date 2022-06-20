@@ -66,13 +66,22 @@
                         <div class="col-sm-6 col-md-6">
                             <div class="form-group">
                                 <label class="custom-switch">
+                                    <input type="checkbox" class="custom-switch-input" name="under_attack" value="1"<%- under_attack ? ' checked' : '' %>>
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description"><%- i18n('all-hosts', 'under-attack') %></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label class="custom-switch">
                                     <input type="checkbox" class="custom-switch-input" name="managed_waf" value="1"<%- managed_waf ? ' checked' : '' %>>
                                     <span class="custom-switch-indicator"></span>
                                     <span class="custom-switch-description"><%- i18n('all-hosts', 'managed-waf') %></span>
                                 </label>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-12">
+                        <div class="col-sm-6 col-md-6">
                             <div class="form-group">
                                 <label class="custom-switch">
                                     <input type="checkbox" class="custom-switch-input" name="allow_websocket_upgrade" value="1"<%- allow_websocket_upgrade ? ' checked' : '' %>>

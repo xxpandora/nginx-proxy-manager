@@ -74,6 +74,7 @@
       "http2-support": "HTTP/2 Support",
       "domain-names": "Domain Names",
       "cert-provider": "Certificate Provider",
+      "under-attack": "I'm Under Attack!",
       "managed-waf": "Managed WAF",
       "caching-enabled": "Cache Assets",
       "ssl-certificate": "SSL Certificate",
