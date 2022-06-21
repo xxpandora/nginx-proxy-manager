@@ -1,6 +1,7 @@
 {
   "en": {
     "str": {
+      "security-tab": "Security",
       "email-address": "Email address",
       "username": "Username",
       "password": "Password",
