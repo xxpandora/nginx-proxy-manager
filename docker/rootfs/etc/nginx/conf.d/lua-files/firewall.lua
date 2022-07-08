@@ -9,9 +9,9 @@ local tostring = tostring
 local next = next
 local secret = " pegacdn"
 local remote_addr = "auto" --Default Automatically get the Clients IP address
-local expire_time = 30
+local expire_time = 86400
 local javascript_REQUEST_TYPE = 2
-local refresh_auth = 3
+local refresh_auth = 5
 local JavascriptVars_opening = [[
 if(!window._phantom || !window.callPhantom){/*phantomjs*/
 if(!window.__phantomas){/*phantomas PhantomJS-based web perf metrics + monitoring tool*/
@@ -429,7 +429,6 @@ local custom_headers = {
 			{"X-Powered-By",nil,}, --PHP Powered by version / identity exposure remove
 			{"X-Content-Encoded-By",nil,}, --Joomla Content encoded by remove
 			{"X-Content-Type-Options","nosniff",}, --block MIME-type sniffing
-			{"X-XSS-Protection","1; mode=block",}, --block cross-site scripting (XSS) attacks
 			{"x-turbo-charged-by",nil,}, --remove x-turbo-charged-by LiteSpeed
 		},
 	},
@@ -2321,7 +2320,6 @@ local function grant_access()
 			ngx.header["Set-Cookie"] = set_cookies
 			ngx.header["X-Content-Type-Options"] = "nosniff"
 			ngx.header["X-Frame-Options"] = "SAMEORIGIN"
-			ngx.header["X-XSS-Protection"] = "1; mode=block"
 			ngx.header["Cache-Control"] = "public, max-age=0 no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
 			ngx.header["Pragma"] = "no-cache"
 			ngx.header["Expires"] = "0"
@@ -2339,7 +2337,6 @@ local function grant_access()
 			ngx.header["Set-Cookie"] = set_cookies
 			ngx.header["X-Content-Type-Options"] = "nosniff"
 			ngx.header["X-Frame-Options"] = "SAMEORIGIN"
-			ngx.header["X-XSS-Protection"] = "1; mode=block"
 			ngx.header["Cache-Control"] = "public, max-age=0 no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
 			ngx.header["Pragma"] = "no-cache"
 			ngx.header["Expires"] = "0"
@@ -2610,7 +2607,6 @@ end
 ngx.header["Set-Cookie"] = set_cookies
 ngx.header["X-Content-Type-Options"] = "nosniff"
 ngx.header["X-Frame-Options"] = "SAMEORIGIN"
-ngx.header["X-XSS-Protection"] = "1; mode=block"
 ngx.header["Cache-Control"] = "public, max-age=0 no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
 ngx.header["Pragma"] = "no-cache"
 ngx.header["Expires"] = "0"
