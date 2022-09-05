@@ -52,7 +52,7 @@ class AccessListClient extends Model {
 	}
 
 	get rule() {
-		return `${this.directive} ${this.address}`;
+		return `${this.address} ${this.directive}`;
 	}
 }
 
