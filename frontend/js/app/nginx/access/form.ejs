@@ -74,22 +74,13 @@
                 <!-- Access -->
                 <div class="tab-pane" id="access">
                     <p>
-                        IP Address Whitelist/Blacklist via
-                        <a target="_blank" href="https://nginx.org/en/docs/http/ngx_http_access_module.html">
-                            Nginx HTTP Access
-                        </a>
+                        IP Access Rules can be based on IP address, IP address range, Autonomous System Number (ASN) or country.
                     </p>
                     <div class="clients"><!-- clients --></div>
                     <div class="row">
                         <div class="col-sm-3 col-md-3">
-                            <div class="form-group">
-                                <input type="text" class="form-control disabled" value="deny" disabled>
-                            </div>
                         </div>
                         <div class="col-sm-9 col-md-9">
-                            <div class="form-group">
-                                <input type="text" class="form-control disabled" value="all" disabled>
-                            </div>
                         </div>
                     </div>
                     <div class="text-muted">Note that the <code>allow</code> and <code>deny</code> directives will be applied in the order they are defined.</div>

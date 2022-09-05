@@ -222,7 +222,7 @@
       "delete-has-hosts": "This Firewall List is associated with {count} Proxy Hosts. They will become publicly available upon deletion.",
       "general": "General",
       "authorization": "Authorization",
-      "access": "Access",
+      "access": "IP Access Rules",
       "satisfy": "Satisfy",
       "satisfy-any": "Satisfy Any",
       "pass-auth": "Pass Auth to Host",
