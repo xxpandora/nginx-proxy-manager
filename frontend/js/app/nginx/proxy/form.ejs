@@ -264,9 +264,24 @@
 				<!-- Advanced -->
                 <div role="tabpanel" class="tab-pane" id="advanced">
                     <div class="row">
-
-
-
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label class="custom-switch">
+                                    <input type="checkbox" class="custom-switch-input" name="rate-limit_advanced" value="1"<%- rate-limit_advanced ? ' checked' : '' %>>
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description"><%- i18n('all-hosts', 'rate-limit-advanced') %></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label class="custom-switch">
+                                    <input type="checkbox" class="custom-switch-input" name="rate-limit_basic" value="1"<%- rate-limit_basic ? ' checked' : '' %>>
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description"><%- i18n('all-hosts', 'rate-limit-basic') %></span>
+                                </label>
+                            </div>
+                        </div>						
                     </div>
                 </div>
             </div>

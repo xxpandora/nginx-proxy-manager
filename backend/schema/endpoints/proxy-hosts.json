@@ -50,6 +50,12 @@
     "under_attack": {
       "$ref": "../definitions.json#/definitions/under_attack"
     },
+    "rate-limit_advanced": {
+      "$ref": "../definitions.json#/definitions/rate-limit_advanced"
+    },
+    "rate-limit_basic": {
+      "$ref": "../definitions.json#/definitions/rate-limit_basic"
+    },
     "managed_waf": {
       "$ref": "../definitions.json#/definitions/managed_waf"
     },
@@ -152,6 +158,12 @@
     "under_attack": {
       "$ref": "#/definitions/under_attack"
     },
+    "rate-limit_advanced": {
+      "$ref": "#/definitions/rate-limit_advanced"
+    },
+    "rate-limit_basic": {
+      "$ref": "#/definitions/rate-limit_basic"
+    },
     "managed_waf": {
       "$ref": "#/definitions/managed_waf"
     },
@@ -245,6 +257,12 @@
           "under_attack": {
             "$ref": "#/definitions/under_attack"
           },
+          "rate-limit_advanced": {
+            "$ref": "#/definitions/rate-limit_advanced"
+          },
+          "rate-limit_basic": {
+            "$ref": "#/definitions/rate-limit_basic"
+          },
           "managed_waf": {
             "$ref": "#/definitions/managed_waf"
           },
@@ -320,6 +338,12 @@
           },
           "under_attack": {
             "$ref": "#/definitions/under_attack"
+          },
+          "rate-limit_advanced": {
+            "$ref": "#/definitions/rate-limit_advanced"
+          },
+          "rate-limit_basic": {
+            "$ref": "#/definitions/rate-limit_basic"
           },
           "managed_waf": {
             "$ref": "#/definitions/managed_waf"
