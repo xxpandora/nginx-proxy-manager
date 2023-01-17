@@ -231,12 +231,12 @@
       "example": true,
       "type": "boolean"
     },
-    "rate-limit_advanced": {
+    "rate_limit_advanced": {
       "description": "Should Advanced Rate Limit",
       "example": true,
       "type": "boolean"
     },
-    "rate-limit_basic": {
+    "rate_limit_basic": {
       "description": "Should Basic Rate Limit",
       "example": true,
       "type": "boolean"
