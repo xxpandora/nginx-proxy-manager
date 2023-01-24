@@ -1,7 +1,7 @@
 {
   "en": {
     "str": {
-      "security-tab": "Security",
+      "security-tab": "Security Option",
       "email-address": "Email address",
       "username": "Username",
       "password": "Password",
@@ -77,6 +77,8 @@
       "cert-provider": "Certificate Provider",
       "under-attack": "I'm Under Attack!",
       "managed-waf": "Managed WAF",
+      "rate-limit-advanced": "Rate Limit Advanced",
+      "rate-limit-basic": "Rate Limit Basic",
       "caching-enabled": "Cache Assets",
       "ssl-certificate": "SSL Certificate",
       "none": "None",

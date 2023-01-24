@@ -72,13 +72,7 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Security -->
-                <div role="tabpanel" class="tab-pane" id="security-options">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12">
+						<div class="col-sm-12 col-md-12">
                             <div class="form-group">
                                 <label class="form-label"><%- i18n('proxy-hosts', 'access-list') %></label>
                                 <select name="access_list_id" class="form-control custom-select" placeholder="<%- i18n('access-lists', 'public') %>">
@@ -243,8 +237,8 @@
                     </div>
                 </div>
 
-				<!-- Advanced -->
-                <div role="tabpanel" class="tab-pane" id="advanced">
+                <!-- Security Option -->
+                <div role="tabpanel" class="tab-pane" id="security-options">
                     <div class="row">
                         <div class="col-sm-6 col-md-6">
                             <div class="form-group">
@@ -263,7 +257,31 @@
                                     <span class="custom-switch-description"><%- i18n('all-hosts', 'managed-waf') %></span>
                                 </label>
                             </div>
+                        </div>						
+                    </div>
+                </div>
+
+				<!-- Advanced -->
+                <div role="tabpanel" class="tab-pane" id="advanced">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label class="custom-switch">
+                                    <input type="checkbox" class="custom-switch-input" name="rate_limit_advanced" value="1"<%- rate_limit_advanced ? ' checked' : '' %>>
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description"><%- i18n('all-hosts', 'rate_limit-advanced') %></span>
+                                </label>
+                            </div>
                         </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label class="custom-switch">
+                                    <input type="checkbox" class="custom-switch-input" name="rate_limit_basic" value="1"<%- rate_limit_basic ? ' checked' : '' %>>
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description"><%- i18n('all-hosts', 'rate_limit-basic') %></span>
+                                </label>
+                            </div>
+                        </div>						
                     </div>
                 </div>
             </div>

@@ -20,6 +20,8 @@ const model = Backbone.Model.extend({
             caching_enabled:         false,
             allow_websocket_upgrade: false,
             under_attack:            false,
+            rate_limit_advanced:     false,
+            rate_limit_basic:        false,
             managed_waf:             false,
             http2_support:           false,
             advanced_config:         '',
