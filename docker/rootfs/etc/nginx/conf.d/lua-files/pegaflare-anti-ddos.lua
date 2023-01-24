@@ -1,5 +1,3 @@
---PEGAFLARE LUA FIREWALL
-
 local os = os
 local string = string
 local math = math
@@ -7,11 +5,11 @@ local table = table
 local tonumber = tonumber
 local tostring = tostring
 local next = next
-local secret = " pegacdn"
+local secret = " pegacdn" --Signature secret key --CHANGE ME FROM DEFAULT!
 local remote_addr = "auto" --Default Automatically get the Clients IP address
-local expire_time = 30
-local javascript_REQUEST_TYPE = 2
-local refresh_auth = 5
+local expire_time = 86400 --One day
+local javascript_REQUEST_TYPE = 2 --Default 2
+local refresh_auth = 1
 local JavascriptVars_opening = [[
 if(!window._phantom || !window.callPhantom){/*phantomjs*/
 if(!window.__phantomas){/*phantomas PhantomJS-based web perf metrics + monitoring tool*/
@@ -46,7 +44,7 @@ local JavascriptPuzzleVars_answer = math.floor(JavascriptPuzzleVars_answer+0.5) 
 local JavascriptPuzzleVars_answer = tostring(JavascriptPuzzleVars_answer) --convert the numeric output to a string
 local x_auth_header = 2 --Default 2
 local x_auth_header_name = "x-auth-answer" --the header our server will expect the client to send us with the javascript answer this will change if you set the config as dynamic
-local challenge = "__pega-id" --this is the first main unique identification of our cookie name
+local challenge = "__uip" --this is the first main unique identification of our cookie name
 local cookie_name_start_date = challenge.."_start_date" --our cookie start date name of our firewall
 local cookie_name_end_date = challenge.."_end_date" --our cookie end date name of our firewall
 local cookie_name_encrypted_start_and_end_date = challenge.."_combination" --our cookie challenge unique id name
@@ -54,6 +52,8 @@ local encrypt_anti_ddos_cookies = 2 --Default 2
 local encrypt_javascript_output = 0
 local ip_whitelist_remote_addr = "auto" --Automatically get the Clients IP address
 local ip_whitelist = {
+--"127.0.0.1", --localhost
+--"192.168.0.1", --localhost
 --Alexa Bot IP
 "204.236.235.245","75.101.186.145",
 --Dot Bot IP
@@ -87,7 +87,8 @@ local ip_whitelist = {
 }
 local ip_blacklist_remote_addr = "auto" --Automatically get the Clients IP address
 local ip_blacklist = {
---
+--"127.0.0.1/30", --localhost
+--"192.168.0.1", --localhost
 }
 local tor = 1 --Allow Tor Users
 local tor_remote_addr = ngx.var.http_user_agent
@@ -99,8 +100,8 @@ local cookie_tor = challenge.."_tor" --our tor cookie
 local cookie_tor_value_allow = "allow" --the value of the cookie when we allow access
 local cookie_tor_value_block = "deny" --the value of the cookie when we block access
 local default_charset = "utf-8"
-local ddos_protected = 1 --enabled by default
-local ddos_protected_custom_hosts = {
+local master_switch = 1 --enabled by default
+local master_switch_custom_hosts = {
 	{
 		1, --run auth checks
 		"localhost/ddos.*", --authenticate Tor websites
@@ -132,7 +133,7 @@ local ddos_protected_custom_hosts = {
 	}, --authenticate .com domains
 	]]
 }
-local powered_by = 1 --enabled by default
+local credits = 1 --enabled by default
 local dynamic_javascript_vars_length = 2 --dynamic default
 local dynamic_javascript_vars_length_static = 10 --how many chars in length should static be
 local dynamic_javascript_vars_length_start = 1 --for dynamic randomize min value to max this is min value
@@ -213,6 +214,10 @@ local user_agent_whitelist_table = {
 	{
 		"^ia_archiver %(%+http%:%/%/www%.alexa%.com%/site%/help%/webmasters%; crawler%@alexa%.com%)$",
 		2,
+	},
+	{
+		"^SiberAPPv1$",
+		3,
 	},
 }
 local authorization = 0
@@ -429,6 +434,7 @@ local custom_headers = {
 			{"X-Powered-By",nil,}, --PHP Powered by version / identity exposure remove
 			{"X-Content-Encoded-By",nil,}, --Joomla Content encoded by remove
 			{"X-Content-Type-Options","nosniff",}, --block MIME-type sniffing
+			{"X-XSS-Protection","1; mode=block",}, --block cross-site scripting (XSS) attacks
 			{"x-turbo-charged-by",nil,}, --remove x-turbo-charged-by LiteSpeed
 		},
 	},
@@ -2056,7 +2062,7 @@ if expire_time > 31536000 then --greater than one year
 end
 
 local expected_header_status = 200
-local authentication_page_status_output = 418
+local authentication_page_status_output = 503
 
 --Put our vars into storage for use later on
 local challenge_original = challenge
@@ -2228,16 +2234,16 @@ Authorization / Restricted Access Area Box
 master switch
 ]]
 --master switch check
-local function check_ddos_protected()
-	if ddos_protected == 2 then --script disabled
+local function check_master_switch()
+	if master_switch == 2 then --script disabled
 		local output = ngx.exit(ngx.OK) --Go to content
 		return output
 	end
-	if ddos_protected == 3 then --custom host selection
+	if master_switch == 3 then --custom host selection
 		local allow_site = nil
-		local ddos_protected_custom_hosts_length = #ddos_protected_custom_hosts
-		for i=1,ddos_protected_custom_hosts_length do --for each host in our table
-			local v = ddos_protected_custom_hosts[i]
+		local master_switch_custom_hosts_length = #master_switch_custom_hosts
+		for i=1,master_switch_custom_hosts_length do --for each host in our table
+			local v = master_switch_custom_hosts[i]
 			if string.match(URL, v[2]) then --if our host matches one in the table
 				if v[1] == 1 then --run auth
 					allow_site = 2 --run auth checks
@@ -2256,7 +2262,7 @@ local function check_ddos_protected()
 		end
 	end
 end
-check_ddos_protected()
+check_master_switch()
 --[[
 master switch
 ]]
@@ -2320,6 +2326,7 @@ local function grant_access()
 			ngx.header["Set-Cookie"] = set_cookies
 			ngx.header["X-Content-Type-Options"] = "nosniff"
 			ngx.header["X-Frame-Options"] = "SAMEORIGIN"
+			ngx.header["X-XSS-Protection"] = "1; mode=block"
 			ngx.header["Cache-Control"] = "public, max-age=0 no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
 			ngx.header["Pragma"] = "no-cache"
 			ngx.header["Expires"] = "0"
@@ -2337,6 +2344,7 @@ local function grant_access()
 			ngx.header["Set-Cookie"] = set_cookies
 			ngx.header["X-Content-Type-Options"] = "nosniff"
 			ngx.header["X-Frame-Options"] = "SAMEORIGIN"
+			ngx.header["X-XSS-Protection"] = "1; mode=block"
 			ngx.header["Cache-Control"] = "public, max-age=0 no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
 			ngx.header["Pragma"] = "no-cache"
 			ngx.header["Expires"] = "0"
@@ -2375,7 +2383,7 @@ grant_access() --perform checks to see if user can access the site or if they wi
 Build HTML Template
 ]]
 
-local title = host .. [[ | PegaCDN WAF]]
+local title = host .. [[ | Anti-DDoS Flood Protection and WAF]]
 
 if javascript_REQUEST_TYPE == 3 then --Dynamic Random request
 	javascript_REQUEST_TYPE = math.random (1, 2) --Randomize between 1 and 2
@@ -2514,14 +2522,14 @@ local footer_body_ad_slot = [[
 ]]
 --End advert positions
 
-local ddos_powered_by = [[
-<div class="powered_by" style="text-align:center;font-size:100%;">
-<a href="//www.pegaflare.com" target="_blank">DDoS protection by &copy; PegaCDN WAF</a>
+local ddos_credits = [[
+<div class="credits" style="text-align:center;font-size:100%;">
+<a href="//www.pegaflare.com" target="_blank">DDoS protection by &copy; PegaFlare WAF</a>
 </div>
 ]]
 
-if powered_by == 2 then
-ddos_powered_by = "" --make empty string
+if credits == 2 then
+ddos_credits = "" --make empty string
 end
 
 --Fix remote_addr output as what ever IP address the Client is using
@@ -2594,7 +2602,7 @@ local anti_ddos_html_output = [[
 ]] .. request_details .. [[
 </center>
 </div>
-]] .. ddos_powered_by .. [[
+]] .. ddos_credits .. [[
 </body>
 </html>
 ]]
@@ -2607,11 +2615,12 @@ end
 ngx.header["Set-Cookie"] = set_cookies
 ngx.header["X-Content-Type-Options"] = "nosniff"
 ngx.header["X-Frame-Options"] = "SAMEORIGIN"
+ngx.header["X-XSS-Protection"] = "1; mode=block"
 ngx.header["Cache-Control"] = "public, max-age=0 no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
 ngx.header["Pragma"] = "no-cache"
 ngx.header["Expires"] = "0"
-if powered_by == 1 then
-ngx.header["X-Powered-By"] = "PegaFlare | www.pegaflare.com"
+if credits == 1 then
+ngx.header["X-Anti-DDoS"] = "PegaFlare | www.pegaflare.com"
 end
 ngx.header.content_type = "text/html; charset=" .. default_charset
 ngx.status = authentication_page_status_output

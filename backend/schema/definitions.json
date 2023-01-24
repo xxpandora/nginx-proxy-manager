@@ -231,16 +231,6 @@
       "example": true,
       "type": "boolean"
     },
-    "rate_limit_advanced": {
-      "description": "Should Advanced Rate Limit",
-      "example": true,
-      "type": "boolean"
-    },
-    "rate_limit_basic": {
-      "description": "Should Basic Rate Limit",
-      "example": true,
-      "type": "boolean"
-    },
     "managed_waf": {
       "description": "Should we block common Exploits by Management WAF Rule",
       "example": true,

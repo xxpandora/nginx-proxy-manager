@@ -1,7 +1,7 @@
 {
   "en": {
     "str": {
-      "security-tab": "Security Option",
+      "security-tab": "Security",
       "email-address": "Email address",
       "username": "Username",
       "password": "Password",
@@ -77,15 +77,17 @@
       "cert-provider": "Certificate Provider",
       "under-attack": "I'm Under Attack!",
       "managed-waf": "Managed WAF",
-      "rate_limit-advanced": "Rate Limit Advanced",
-      "rate_limit-basic": "Rate Limit Basic",
       "caching-enabled": "Cache Assets",
       "ssl-certificate": "SSL Certificate",
       "none": "None",
       "new-cert": "Request a new SSL Certificate",
       "with-le": "with Let's Encrypt",
       "no-ssl": "This host will not use HTTPS",
-      "advanced": "Firewall Rules",
+      "advanced": "Advanced",
+      "advanced-warning": "Enter your custom Nginx configuration here at your own risk!",
+      "advanced-config": "Custom Nginx Configuration",
+      "advanced-config-var-headline": "These proxy general are available as nginx variables:",
+      "advanced-config-header-info": "Please note, that any add_header or set_header directives added here will not be used by nginx. You will have to add a custom location '/' and add the header in the custom config there.",
       "hsts-enabled": "HSTS Enabled",
       "hsts-subdomains": "HSTS Subdomains",
       "locations": "Custom locations"
