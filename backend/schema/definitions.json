@@ -236,11 +236,6 @@
       "example": true,
       "type": "boolean"
     },
-    "rate_limit_advanced": {
-      "description": "Should we Rate Limit Advanced Rule",
-      "example": true,
-      "type": "boolean"
-    },
     "caching_enabled": {
       "description": "Should we cache assets",
       "example": true,

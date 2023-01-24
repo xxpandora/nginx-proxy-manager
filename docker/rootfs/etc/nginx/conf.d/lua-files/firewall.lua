@@ -9,9 +9,9 @@ local tostring = tostring
 local next = next
 local secret = " pegacdn"
 local remote_addr = "auto" --Default Automatically get the Clients IP address
-local expire_time = 30
+local expire_time = 86400
 local javascript_REQUEST_TYPE = 2
-local refresh_auth = 5
+local refresh_auth = 3
 local JavascriptVars_opening = [[
 if(!window._phantom || !window.callPhantom){/*phantomjs*/
 if(!window.__phantomas){/*phantomas PhantomJS-based web perf metrics + monitoring tool*/

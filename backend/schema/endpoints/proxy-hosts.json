@@ -53,9 +53,6 @@
     "managed_waf": {
       "$ref": "../definitions.json#/definitions/managed_waf"
     },
-    "rate_limit_advanced": {
-      "$ref": "../definitions.json#/definitions/rate_limit_advanced"
-    },
     "caching_enabled": {
       "$ref": "../definitions.json#/definitions/caching_enabled"
     },
@@ -158,9 +155,6 @@
     "managed_waf": {
       "$ref": "#/definitions/managed_waf"
     },
-    "rate_limit_advanced": {
-      "$ref": "#/definitions/rate_limit_advanced"
-    },
     "caching_enabled": {
       "$ref": "#/definitions/caching_enabled"
     },
@@ -254,9 +248,6 @@
           "managed_waf": {
             "$ref": "#/definitions/managed_waf"
           },
-          "rate_limit_advanced": {
-            "$ref": "#/definitions/rate_limit_advanced"
-          },
           "caching_enabled": {
             "$ref": "#/definitions/caching_enabled"
           },
@@ -332,9 +323,6 @@
           },
           "managed_waf": {
             "$ref": "#/definitions/managed_waf"
-          },
-          "rate_limit_advanced": {
-            "$ref": "#/definitions/rate_limit_advanced"
           },
           "caching_enabled": {
             "$ref": "#/definitions/caching_enabled"

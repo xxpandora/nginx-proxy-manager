@@ -129,7 +129,6 @@ module.exports = Mn.View.extend({
 
             // Manipulate
             data.managed_waf     = !!data.managed_waf;
-            data.rate_limit_advanced     = !!data.rate_limit_advanced;
             data.preserve_path      = !!data.preserve_path;
             data.http2_support      = !!data.http2_support;
             data.hsts_enabled       = !!data.hsts_enabled;

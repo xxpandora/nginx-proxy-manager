@@ -162,7 +162,6 @@ module.exports = Mn.View.extend({
             data.forward_port            = parseInt(data.forward_port, 10);
             data.under_attack         = !!data.under_attack;
             data.managed_waf          = !!data.managed_waf;
-            data.rate_limit_advanced     = !!data.rate_limit_advanced;
             data.caching_enabled         = !!data.caching_enabled;
             data.allow_websocket_upgrade = !!data.allow_websocket_upgrade;
             data.http2_support           = !!data.http2_support;

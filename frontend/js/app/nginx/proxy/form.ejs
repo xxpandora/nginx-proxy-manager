@@ -66,33 +66,6 @@
                         <div class="col-sm-6 col-md-6">
                             <div class="form-group">
                                 <label class="custom-switch">
-                                    <input type="checkbox" class="custom-switch-input" name="under_attack" value="1"<%- under_attack ? ' checked' : '' %>>
-                                    <span class="custom-switch-indicator"></span>
-                                    <span class="custom-switch-description"><%- i18n('all-hosts', 'under-attack') %></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6">
-                            <div class="form-group">
-                                <label class="custom-switch">
-                                    <input type="checkbox" class="custom-switch-input" name="managed_waf" value="1"<%- managed_waf ? ' checked' : '' %>>
-                                    <span class="custom-switch-indicator"></span>
-                                    <span class="custom-switch-description"><%- i18n('all-hosts', 'managed-waf') %></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6">
-                            <div class="form-group">
-                                <label class="custom-switch">
-                                    <input type="checkbox" class="custom-switch-input" name="rate_limit_advanced" value="1"<%- rate_limit_advanced ? ' checked' : '' %>>
-                                    <span class="custom-switch-indicator"></span>
-                                    <span class="custom-switch-description"><%- i18n('all-hosts', 'rate-limit-advanced') %></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6">
-                            <div class="form-group">
-                                <label class="custom-switch">
                                     <input type="checkbox" class="custom-switch-input" name="allow_websocket_upgrade" value="1"<%- allow_websocket_upgrade ? ' checked' : '' %>>
                                     <span class="custom-switch-indicator"></span>
                                     <span class="custom-switch-description"><%- i18n('proxy-hosts', 'allow-websocket-upgrade') %></span>
@@ -270,21 +243,26 @@
                     </div>
                 </div>
 
-                <!-- Advanced -->
+				<!-- Advanced -->
                 <div role="tabpanel" class="tab-pane" id="advanced">
                     <div class="row">
-                        <div class="col-md-12">
-                            <p><%- i18n('all-hosts', 'advanced-config-var-headline') %></p>
-                            <ul class="text-monospace">
-                                <li><code>$server</code> <%- i18n('proxy-hosts', 'forward-host') %></li>
-                                <li><code>$port</code> <%- i18n('proxy-hosts', 'forward-port') %></li>
-                                <li><code>$forward_scheme</code> <%- i18n('proxy-hosts', 'forward-scheme') %></li>
-                            </ul>
-                            <div class="form-group mb-0">
-                                <label class="form-label"><%- i18n('all-hosts', 'advanced-config') %></label>
-                                <textarea name="advanced_config" rows="8" class="form-control text-monospace" placeholder="# <%- i18n('all-hosts', 'advanced-warning') %>"><%- advanced_config %></textarea>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label class="custom-switch">
+                                    <input type="checkbox" class="custom-switch-input" name="under_attack" value="1"<%- under_attack ? ' checked' : '' %>>
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description"><%- i18n('all-hosts', 'under-attack') %></span>
+                                </label>
                             </div>
-                            <p class="small text-gray"><i class="fe fe-alert-triangle"></i> <%- i18n('all-hosts', 'advanced-config-header-info') %></p>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label class="custom-switch">
+                                    <input type="checkbox" class="custom-switch-input" name="managed_waf" value="1"<%- managed_waf ? ' checked' : '' %>>
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description"><%- i18n('all-hosts', 'managed-waf') %></span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
