@@ -214,6 +214,10 @@ const internalNginx = {
 			let origLocations;
 
 			// Manipulate the data a bit before sending it to the template
+			if (host_type !== 'default') {
+				host.use_default_location = true;
+			}
+
 			if (host.locations) {
 				//logger.info ('host.locations = ' + JSON.stringify(host.locations, null, 2));
 				origLocations    = [].concat(host.locations);
