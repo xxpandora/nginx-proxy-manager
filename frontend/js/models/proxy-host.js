@@ -24,7 +24,6 @@ const model = Backbone.Model.extend({
             rate_limit_basic:        false,
             managed_waf:             false,
             http2_support:           false,
-            advanced_config:         '',
             enabled:                 true,
             meta:                    {},
             // The following are expansions:

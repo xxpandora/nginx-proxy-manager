@@ -77,7 +77,6 @@ exports.up = function (knex/*, Promise*/) {
 				table.integer('rate_limit_advanced').notNull().unsigned().defaultTo(0);
 				table.integer('rate_limit_basic').notNull().unsigned().defaultTo(0);
 				table.integer('managed_waf').notNull().unsigned().defaultTo(0);
-				table.text('advanced_config').notNull().defaultTo('');
 				table.json('meta').notNull();
 			});
 		})
@@ -99,7 +98,6 @@ exports.up = function (knex/*, Promise*/) {
 				table.integer('rate_limit_advanced').notNull().unsigned().defaultTo(0);
 				table.integer('rate_limit_basic').notNull().unsigned().defaultTo(0);
 				table.integer('managed_waf').notNull().unsigned().defaultTo(0);
-				table.text('advanced_config').notNull().defaultTo('');
 				table.json('meta').notNull();
 			});
 		})
@@ -115,7 +113,6 @@ exports.up = function (knex/*, Promise*/) {
 				table.json('domain_names').notNull();
 				table.integer('certificate_id').notNull().unsigned().defaultTo(0);
 				table.integer('ssl_forced').notNull().unsigned().defaultTo(0);
-				table.text('advanced_config').notNull().defaultTo('');
 				table.json('meta').notNull();
 			});
 		})

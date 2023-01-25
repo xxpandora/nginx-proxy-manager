@@ -7,7 +7,6 @@ const model = Backbone.Model.extend({
         return {
             opened:             false,
             path:               '',
-            advanced_config:    '',
             forward_scheme:     'http',
             forward_host:       '',
             forward_port:       '80'

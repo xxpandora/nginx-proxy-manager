@@ -16,7 +16,6 @@ const model = Backbone.Model.extend({
             hsts_subdomains: false,
             enabled:         true,
             meta:            {},
-            advanced_config: '',
             // The following are expansions:
             owner:           null,
             certificate:     null

@@ -33,9 +33,6 @@
     "http2_support": {
       "$ref": "../definitions.json#/definitions/http2_support"
     },
-    "advanced_config": {
-      "type": "string"
-    },
     "enabled": {
       "$ref": "../definitions.json#/definitions/enabled"
     },
@@ -70,9 +67,6 @@
     },
     "http2_support": {
       "$ref": "#/definitions/http2_support"
-    },
-    "advanced_config": {
-      "$ref": "#/definitions/advanced_config"
     },
     "enabled": {
       "$ref": "#/definitions/enabled"
@@ -134,9 +128,6 @@
           "http2_support": {
             "$ref": "#/definitions/http2_support"
           },
-          "advanced_config": {
-            "$ref": "#/definitions/advanced_config"
-          },
           "meta": {
             "$ref": "#/definitions/meta"
           }
@@ -179,9 +170,6 @@
           },
           "http2_support": {
             "$ref": "#/definitions/http2_support"
-          },
-          "advanced_config": {
-            "$ref": "#/definitions/advanced_config"
           },
           "meta": {
             "$ref": "#/definitions/meta"

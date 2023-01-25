@@ -70,9 +70,6 @@
     "access_list_id": {
       "$ref": "../definitions.json#/definitions/access_list_id"
     },
-    "advanced_config": {
-      "type": "string"
-    },
     "enabled": {
       "$ref": "../definitions.json#/definitions/enabled"
     },
@@ -109,9 +106,6 @@
             "$ref": "#/definitions/forward_port"
           },
           "forward_path": {
-            "type": "string"
-          },
-          "advanced_config": {
             "type": "string"
           }
         }
@@ -175,9 +169,6 @@
     },
     "access_list_id": {
       "$ref": "#/definitions/access_list_id"
-    },
-    "advanced_config": {
-      "$ref": "#/definitions/advanced_config"
     },
     "enabled": {
       "$ref": "#/definitions/enabled"
@@ -275,9 +266,6 @@
           "access_list_id": {
             "$ref": "#/definitions/access_list_id"
           },
-          "advanced_config": {
-            "$ref": "#/definitions/advanced_config"
-          },
           "enabled": {
             "$ref": "#/definitions/enabled"
           },
@@ -356,9 +344,6 @@
           },
           "access_list_id": {
             "$ref": "#/definitions/access_list_id"
-          },
-          "advanced_config": {
-            "$ref": "#/definitions/advanced_config"
           },
           "enabled": {
             "$ref": "#/definitions/enabled"
