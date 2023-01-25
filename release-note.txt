@@ -37,3 +37,15 @@ Back to v2.9.21 and v2.9.22 file.
 *************
 
 Update Block Exploit to Management WAF Rule
+
+*************
+***v2.10.10***
+*************
+
+Add Rate Limit Config
+
+*************
+***v2.10.11***
+*************
+
+Update Lua Firewall content
