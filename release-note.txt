@@ -50,3 +50,4 @@ Add Rate Limit Config
 
 Update Lua Firewall content
 Update App Logo
+Custom Rate Limit template add "rate_req" "rate_conn" "rate_burst"
